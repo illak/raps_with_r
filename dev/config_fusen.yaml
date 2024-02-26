@@ -1,0 +1,15 @@
+save_data.Rmd:
+  path: dev/save_data.Rmd
+  state: active
+  R:
+  - R/get_raw_data.R
+  - R/get_laspeyeres.R
+  tests: tests/testthat/test-get_raw_data.R
+  vignettes: vignettes/dev-save_data.Rmd
+  inflate:
+    flat_file: dev/save_data.Rmd
+    vignette_name: dev-save_data
+    open_vignette: true
+    check: true
+    document: true
+    overwrite: 'yes'

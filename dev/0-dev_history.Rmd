@@ -16,15 +16,18 @@ All commands that you use to use when developing packages...
 fusen::fill_description(
   pkg = here::here(),
   fields = list(
-    Title = "Build A Package From Rmarkdown File",
-    Description = "Use Rmarkdown First method to build your package. Start your package with documentation. Everything can be set from a Rmarkdown file in your project.",
+    Title = "Housing Data For Luxembourg",
+    Version = "0.1",
+    Description = "This package contains functions to get, clean and analyse housing price data for Luxembourg.",
     `Authors@R` = c(
-      person("John", "Doe", email = "john@email.me", role = c("aut", "cre"), comment = c(ORCID = "0000-0000-0000-0000"))
+      person("Illak", "Zapata", email = "i.zapata1989@gmail.com", 
+             role = c("aut", "cre"), 
+             comment = c(ORCID = "0000-0002-3211-3689"))
     )
   )
-)
+, overwrite = TRUE)
 # Define License with use_*_license()
-usethis::use_mit_license("John Doe")
+usethis::use_gpl3_license()
 ```
 
 # All-in-one function to deploy publicly on GitHub
@@ -62,6 +65,21 @@ usethis::use_news_md()
 ```
 
 **From now, you will need to "inflate" your package at least once to be able to use the following commands. Let's go to your flat template, and come back here later if/when needed.**
+
+
+# Inflate save_data.Rmd
+
+Start by inflating `dev/save_data.Rmd`:
+
+```{r development-inflate, eval=FALSE}
+# Run but keep eval=FALSE to avoid infinite loop
+# Execute in the console directly
+fusen::inflate(flat_file = "dev/save_data.Rmd",
+               vignette_name = "dev-save_data",
+               overwrite = T)
+
+```
+
 
 
 # Package development tools

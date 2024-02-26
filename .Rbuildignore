@@ -1,1 +1,4 @@
 ^dev$
+^LICENSE\.md$
+^raps_with_r\.Rproj$
+^\.Rproj\.user$
